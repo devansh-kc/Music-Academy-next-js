@@ -50,7 +50,7 @@ const FeaturedCourses = () => {
       <div className="mt-20 text-center">
         <Link
           href="/courses"
-          className=" bg-transparent  backdrop-blur-3xl  border p-4"
+          className=" bg-black/30  backdrop-blur-3xl  border p-4"
         >
           {" "}
           View All Courses
