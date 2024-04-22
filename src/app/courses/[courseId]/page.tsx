@@ -33,7 +33,7 @@ const CourseDetails = ({ params }:CourseId) => {
                 {details?.description}
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
-                <Image
+                <img
                   src={details?.image}
                   height="1000"
                   width="1000"
