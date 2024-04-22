@@ -3,9 +3,14 @@ import React from "react";
 import CourseData from "@/data/data__courses.json";
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import Link from "next/link";
 
-const CourseDetails = ({ params }) => {
+import Link from "next/link";
+interface CourseId{
+  params:any
+
+}
+
+const CourseDetails = ({ params }:CourseId) => {
   const details = CourseData.courses.find(
     (course) => course.id == params.courseId
   );
