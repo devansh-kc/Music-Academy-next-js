@@ -7,19 +7,20 @@ import Link from "next/link";
 
 const FeaturedCourses = () => {
   interface Course {
-    id: Number;
-    title: String;
-    slug: String;
-    description: String;
-    price: Number;
-    instructor: String;
+    id: number;
+    title: string;
+    slug: string;
+    description: string;
+    price: number;
+    instructor: string;
     isFeatured: boolean;
+    image: string;
   }
   const featuredCourses = courseData.courses.filter(
     (course: Course) => course.isFeatured
   );
   return (
-    <div className="py-12 bg-gray-900">
+    <div className="py-12 bg-gray-900" >
       <div>
         <div className="text-center">
           <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">
@@ -32,9 +33,10 @@ const FeaturedCourses = () => {
       </div>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  justify-center">
         {featuredCourses.map((course: Course) => (
-          <div className="flex justify-center m-4">
+          <div className="flex justify-center m-4" key={course.id}>
             <BackgroundGradient className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
               <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow">
+                <img src={course.image} alt={course.title}/>
                 <p className="text-lg sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
                   {course.title}
                 </p>
