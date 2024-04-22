@@ -14,7 +14,7 @@ const courses = () => {
     price: number;
     instructor: string;
     isFeatured: boolean;
-    image:string;
+    image: string;
   }
   return (
     <div className="min-h-screen bg-black py-12 pt-36">
@@ -22,7 +22,7 @@ const courses = () => {
         All courses ({courseData.courses.length})
       </h1>
       <div className="flex flex-wrap justify-center">
-        {courseData.courses.map((course:Course) => (
+        {courseData.courses.map((course: Course) => (
           <CardContainer className="inter-var m-4" key={course.id}>
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
               <CardItem
@@ -50,12 +50,10 @@ const courses = () => {
               <div className="flex justify-between items-center mt-20">
                 <CardItem
                   translateZ={20}
-                  as={Link}
-                  href="https://twitter.com/mannupaaji"
                   target="__blank"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
-                  Learn More
+                  <Link href={`/courses/${course.id}`}>Learn More</Link>
                 </CardItem>
                 <CardItem
                   translateZ={20}
