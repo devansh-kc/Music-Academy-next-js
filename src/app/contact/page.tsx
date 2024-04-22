@@ -2,7 +2,7 @@
 import React, { FormEvent, useState } from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 
-const contact = () => {
+const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   function SubmitHandler(event: FormEvent<HTMLFormElement>) {
@@ -50,4 +50,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
